@@ -1,6 +1,5 @@
 import pickle
 import streamlit as st
-sys.path.insert(1, "requirements.txt")
 from streamlit_option_menu import option_menu
 
 # Importing saved models
