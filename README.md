@@ -1,5 +1,5 @@
 # ml-projects
-#Diabetes and Heart disease prediction app
+Diabetes and Heart disease prediction app
 #Bennett Mhlanga
 #Advancing Full Stack Data Scientist, Data analytics
 #Bennettmhlanga959@gmail.com/bennett.mhlanga@students.uz.ac.zw
