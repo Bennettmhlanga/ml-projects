@@ -1,6 +1,5 @@
 import pickle
 import streamlit as st
-from streamlit_option_menu import option_menu
 
 # Importing saved models
 diabetes_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/diabetes.sav", 'rb'))
@@ -8,18 +7,15 @@ heart_disease_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certificatio
 parkinsons_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/parkinsons.sav", 'rb'))
 
 # Sidebar navigation
-with st.sidebar:
-    selected = option_menu("Multi-Disease prediction system",
-                           ["Diabetes Prediction",
-                            "Heart Disease",                       
-                            "About"],
-                           icons=['activity', 'balloon-heart-fill', 'arrow-through-heart', 'file-person-fill'],
-                           default_index=0)
+selected = st.sidebar.selectbox(
+    "Multi-Disease prediction system",
+    ["Diabetes Prediction", "Heart Disease", "About"],
+    index=0
+)
 
 # Diabetes prediction page
 if selected == 'Diabetes Prediction':
     st.title('ML diabetes prediction')
-    
     # Columns for input fields
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -41,7 +37,6 @@ if selected == 'Diabetes Prediction':
    
     # Code for prediction
     diab_diagnosis = ''
-    
     # Create a button for prediction
     if st.button('Diabetes Test Result'):
         input_data = [
@@ -56,10 +51,9 @@ if selected == 'Diabetes Prediction':
             diab_diagnosis = 'Diabetes not detected'
     
     st.success(diab_diagnosis)
-
+# Heart Disease prediction page
 if selected == 'Heart Disease':
     st.title('ML Heart Disease prediction')
-    
     # Columns for input fields
     col1, col2, col3 = st.columns(3)
     with col1:
@@ -108,9 +102,9 @@ if selected == 'Heart Disease':
     
     st.success(heart_diagnosis)
 
-if selected == "About":
+# About page
+if selected == 'About':
     st.title("About author")
-    
     st.write("Name: Bennett Mhlanga")
     st.write("Biography:")
     st.write("Bennett Mhlanga is a dedicated computer science student at the University of Zimbabwe, with a strong interest in data science and data analytics. He is passionate about leveraging data-driven approaches to solve complex problems and make informed decisions.")
