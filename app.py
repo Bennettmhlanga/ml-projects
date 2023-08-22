@@ -2,9 +2,9 @@ import pickle
 import streamlit as st
 
 # Importing saved models
-diabetes_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/diabetes.sav", 'rb'))
-heart_disease_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/heart_model.sav", 'rb'))
-parkinsons_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/parkinsons.sav", 'rb'))
+diabetes_model = pickle.load(open("diabetes.sav", 'rb'))
+heart_disease_model = pickle.load(open("heart_model.sav", 'rb'))
+#parkinsons_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/parkinsons.sav", 'rb'))
 
 # Sidebar navigation
 selected = st.sidebar.selectbox(
