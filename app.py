@@ -1,6 +1,6 @@
 import pickle
 import streamlit as st
-from streamlit-option-menu import option_menu
+from streamlit_option_menu import option_menu
 
 # Importing saved models
 diabetes_model = pickle.load(open("C:/Users/Mai Bhubhu/Desktop/certification/SIDHARDHAN/projects/diabetes.sav", 'rb'))
