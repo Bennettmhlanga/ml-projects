@@ -3,7 +3,7 @@ import pickle
 import pandas as pd
 
 # Load the pre-trained model
-model_path = 'lr-model.pkl'
+model_path = 'IPL_scores/lr-model.pkl'
 with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
