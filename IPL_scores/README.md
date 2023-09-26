@@ -6,7 +6,7 @@ Please note that this application is provided as a demo for learning purposes an
 # Launch the Application: 
 To use the IPL Score Prediction application, ensure that you have Python installed on your computer. Open a command prompt or terminal and navigate to the project directory. 
 **Run the following command to launch the application**:
-streamlit run app.py
+streamlit run app.py // or use the following url:**https://ml-projects-4hxnqpydx3c82rnbsydxgj.streamlit.app/** if it is not accessible it will be because the app will be temporarily deactivated by streamlit due to inactiveness.
 **Input Match Details**: Once the application is running, you will see a web page with input fields. Follow these steps to fill in the details:
 
 **Batting Team**: Choose the team currently batting from the dropdown list.
